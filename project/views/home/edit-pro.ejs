@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit page</title>
+</head>
+<body>
+	<div>
+		<h1>Edit Info</h1> 		
+	</div>
+
+	<a href="/home/allproduct"> Back to List</a> 
+	<a href="/logout"> logout</a><br>
+
+	<form method="post">
+		<table>
+			<tr>
+				<td>Id</td>
+				<td><input type="text" readonly name="customer_id" value="<%=customer.customer_id%>"></td>
+			</tr>
+			<tr>
+				<td>pname</td>
+				<td><input type="text" name="name" value="<%=customer.name%>"></td>
+			</tr>
+			<tr>
+				<td>quantity :</td>
+				<td><input type="text" name="username" value="<%=customer.username%>"></td>
+			</tr>
+			<tr>
+				<td>quantity :</td>
+				<td><input type="text" name="phone" value="<%=customer.phone%>"></td>
+			</tr>
+			<tr>
+				<td>quantity :</td>
+				<td><input type="text" name="active_posts" value="<%=customer.active_posts%>"></td>
+			</tr>
+			<tr>
+				<td>quantity :</td>
+				<td><input type="text" name="pending_posts" value="<%=customer.pending_posts%>"></td>
+			</tr>
+			<tr>
+				<td>quantity :</td>
+				<td><input type="text" name="sold_posts" value="<%=customer.sold_posts%>"></td>
+			</tr>
+			<tr>
+				<td>total_posts :</td>
+				<td><input type="text" name="total_posts" value="<%=customer.total_posts%>"></td>
+			</tr>
+		
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="Update"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

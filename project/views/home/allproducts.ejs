@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container">
+		<h1>User List</h1> 		
+	
+
+	<a href="/home"> Back</a> |
+	<a href="/logout"> logout</a> |
+	<a href="/home/addproduct"> Add Customer</a><br>
+
+	<table class="table table-responsive table-bordered">
+		<tr>
+			<td>ID</td>
+			<td>username</td>
+			<td>name</td>
+			<td>phone</td>
+			<td>active_post</td>
+			<td>pending_post</td>
+			<td>sold_post</td>
+			<td>total_post</td>
+			<td>Action</td>
+		</tr>
+		<% for(var i=0; i < customerList.length; i++){ %>
+		<tr>
+			<td><%= customerList[i].customer_id %></td>
+			<td><%= customerList[i].username %></td>
+			<td><%= customerList[i].name %></td>
+			<td><%= customerList[i].phone %></td>
+			<td><%= customerList[i].active_posts %></td>
+			<td><%= customerList[i].pending_posts %></td>
+			<td><%= customerList[i].sold_posts %></td>
+			<td><%= customerList[i].total_posts %></td>
+			<td>
+				<a href="/home/editp/<%= customerList[i].customer_id %>">EDIT</a> | 
+				<a href="/home/deletep/<%= customerList[i].customer_id %>">DELETE</a>  
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</div>
+</body>
+</html>
